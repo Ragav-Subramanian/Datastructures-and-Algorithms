@@ -1,0 +1,75 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *left,*right;
+};
+
+struct node *createnode(int data)
+{
+ struct node *newn=(struct node *)malloc(sizeof(struct node));
+ newn->data=data;
+ newn->left=newn->right=NULL;
+ return newn;
+}
+
+struct node* insertbt(int a[],struct  node *n,int i,int nof)
+{
+   if(i<nof)
+   {
+       struct node* t=createnode(a[i]);
+       n=t;
+       n->left=insertbt(a,n->left,2*i+1,nof);
+       n->right=insertbt(a,n->right,2*i+2,nof);
+   }
+   return n;
+}
+
+void printpre(struct node *n)
+{
+    if(n!=NULL)
+    {
+        printf("%d ",n->data);
+        printpre(n->left);
+        printpre(n->right);
+    }
+}
+ void printin(struct node *n)
+ {
+     if(n!=NULL)
+     {
+         printin(n->left);
+         printf("%d ",n->data);
+         printin(n->right);
+     }
+ }
+ 
+ void printpo(struct node *n)
+ {
+     if(n!=NULL)
+     {
+         printpo(n->left);
+         printpo(n->right);
+         printf("%d ",n->data);
+     }
+ }
+ 
+ int main()
+ {
+     int n;
+     scanf("%d",&n);
+     int a[n];
+     for(int i=0;i<n;i++)
+     {
+         scanf("%d ",&a[i]);
+     }
+     struct node* root=NULL;
+     root=insertbt(a,root,0,n);
+      printpre(root);
+      printf("\n");
+      printin(root);
+      printf("\n");
+      printpo(root);
+     return 0;
+ }
