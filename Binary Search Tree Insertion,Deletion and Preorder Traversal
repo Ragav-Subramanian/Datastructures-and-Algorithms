@@ -1,0 +1,124 @@
+#include<stdio.h>
+#include <stdlib.h>
+struct node 
+{
+    int data;
+    struct node *left,*right;
+}*root=NULL,*temp;
+
+struct node* createnode(int data)
+{
+    struct node *newn=malloc(sizeof(struct node));
+    newn->data=data;
+    newn->left=newn->right=NULL;
+    return newn;
+};
+
+
+void insertbst(struct node *n,int data)
+{
+  if(root==NULL)
+ {
+     root=createnode(data);
+
+ }
+ else if(data<n->data)
+ {
+     if(n->left!=NULL)
+     {
+         insertbst(n->left,data);
+     }
+     else
+     {
+         n->left=createnode(data);
+     }
+ }
+ else
+ {
+     if(n->right!=NULL)
+     {
+         insertbst(n->right,data);
+     }
+     else
+     {
+         n->right=createnode(data);
+     }
+ }
+}
+
+struct node* minnod(struct node* node)
+{
+    struct node* p=node;
+    while(p && p->left!=NULL)
+    {
+        p=p->left;
+    }
+    return p;
+}
+struct node* deletebst(struct node* n,int data)
+{
+   if(n==NULL)
+   {
+       return n;
+   }
+   if(data<n->data)
+   {
+      n->left=deletebst(n->left,data); 
+   }
+   else if(data>n->data)
+   {
+       n->right=deletebst(n->right,data);
+   }
+   else
+   {
+       if(n->left==NULL)
+       {
+           struct node* t=n->right;
+           free(n);
+           return t;
+       }
+       else if(n->right==NULL)
+       {
+           struct node* t=n->left;
+           free(n);
+           return t;
+       }
+       
+       struct node* t=minnod(n->right);
+       n->data=t->data;
+       n->right=deletebst(n->right,t->data);
+   }
+   return n;
+}
+void printPreorder(struct node *t)
+{
+    if(t!=NULL)
+    {
+        printf("%d ",t->data);
+        printPreorder(t->left);
+        printPreorder(t->right);
+    }
+}
+
+int main()
+{
+ int n,i,q;
+ scanf("%d",&n);
+ while(n--)
+ {
+     scanf("%d ",&q);
+     switch(q)
+     {
+        case 1: scanf("%d",&i);
+                insertbst(root,i);
+                break;
+        case 2: scanf("%d",&i);
+                temp=deletebst(root,i);
+                break;
+        case 3: printPreorder(root);
+                printf("\n");
+                break;
+     }
+ }
+return 0;
+}
