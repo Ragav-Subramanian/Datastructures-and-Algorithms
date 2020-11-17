@@ -1,1 +1,0 @@
-Programs are prefered to be as Functions and possibly with Comments.
