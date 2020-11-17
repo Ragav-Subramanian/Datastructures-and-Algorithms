@@ -1,1 +1,7 @@
 Need to be Done..
+
+1.Creation 
+2.Insertion 
+3.Deletion
+4.Updation
+5.Traversing
