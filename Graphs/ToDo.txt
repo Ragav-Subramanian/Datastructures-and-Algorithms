@@ -1,4 +1,27 @@
 Need to be Done..
 
-1.Traversals 
-2.Shortest Path
+1.BFS
+2.DFS
+3.Graph Cycle
+4.Bellman - Ford
+5.Floyd Warshall
+6.Topological Sorting 
+7.Kahn's Algorithm 
+8.Prim's Minimum Spanning Tree
+9.Kruskal's Minimum Spanning Tree
+10.Boruvka's Algorithm 
+11.Hamiltonian Cycle
+12.Dijkstra’s shortest path algorithm
+13.Johnson’s algorithm for All-pairs shortest paths
+14.Dial’s Algorithm
+15.Karp’s minimum mean (or average) weight cycle algorithm
+16.Fleury’s Algorithm for printing Eulerian Path or Circuit
+17.Tarjan’s Algorithm to find strongly connected Components
+18.Paths to travel each nodes using each edge (Seven Bridges of Königsberg)
+19.Kosaraju Algorithms
+20.Ford-Fulkerson Algorithm for Maximum Flow Problem
+21.Katz Centrality (Centrality Measure)
+22.Barabasi Albert Graph (for Scale Free Models)
+23.Boggle (Find all possible words in a board of characters)
+24.Hopcroft Karp Algorithm for Maximum Matching-Implementation
+25.Hierholzer’s Algorithm for directed graph
