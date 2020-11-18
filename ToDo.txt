@@ -1,5 +1,7 @@
 The Following Algorithms need to be Implemented.
 
+with Maximum Reference Attached to it.
+
 Linked List 
   * Doubly Linked List
   * Circular Linked List
@@ -8,6 +10,12 @@ Linked List
   * Deletion 
   * Searching 
 
+Stack 
+  * Implementations 
+
+Queue 
+  * Implementations 
+  
 Heap Datastructure 
   * Minheap 
   * Maxheap
