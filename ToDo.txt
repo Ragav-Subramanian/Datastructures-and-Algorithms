@@ -1,1 +1,33 @@
 The Following Algorithms need to be Implemented.
+
+String and Array Algorithms 
+  * Rabin-Karp for String Matching 
+  * KMP - Prefix Function 
+  * Z - Function 
+  * Suffix Array 
+
+Tree Algoritms 
+  * Binary Tree 
+  * Binary Search Tree 
+  * N-Array Tree
+  * Segment Tree
+  *
+
+Trie Algorithms 
+  * Aho Corasick Algorithm 
+  * Insertion 
+  * Deletion 
+  * Searching 
+
+Sparse Table Datastructure 
+  * Implementation
+
+DSU - Disjoint Set Union Datastructure
+  * Implementation
+
+Sqrt Decomposition 
+  *Implementation 
+  * Mo's Algorithm
+
+Treap Datastructure - Tree + Heap 
+  * Implementation
