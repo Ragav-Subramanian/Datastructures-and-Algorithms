@@ -7,8 +7,7 @@ Linked List
   * Circular Linked List
   * Traversal 
   * Insertion 
-  * Deletion 
-  * Searching 
+  * Deletion
 
 Stack 
   * Implementations 
@@ -22,6 +21,7 @@ Heap Datastructure
   * Sorting
 
 String and Array Algorithms 
+  * Naive String Matching
   * Rabin-Karp for String Matching 
   * KMP - Prefix Function 
   * Z - Function 

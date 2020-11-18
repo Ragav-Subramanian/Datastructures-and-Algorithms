@@ -10,3 +10,4 @@ Contribution can be as follows:
  * Giving Solution in different Programming Language.
  * Adding missed Datastructure or Algorithm.
  * Adding Comments to the program.
+ * Adding Variations to the Algorithm.
