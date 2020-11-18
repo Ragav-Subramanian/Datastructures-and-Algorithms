@@ -1,18 +1,54 @@
 The Following Algorithms need to be Implemented.
 
+Linked List 
+  * Doubly Linked List
+  * Circular Linked List
+  * Traversal 
+  * Insertion 
+  * Deletion 
+  * Searching 
+
+Heap Datastructure 
+  * Minheap 
+  * Maxheap
+  * Sorting
+
 String and Array Algorithms 
   * Rabin-Karp for String Matching 
   * KMP - Prefix Function 
   * Z - Function 
   * Suffix Array 
+  * Manacher's Algorithm
+  * Main-Lorentz Algorithm
 
 Tree Algoritms 
   * Binary Tree 
   * Binary Search Tree 
   * N-Array Tree
   * Segment Tree
-  *
-
+  * Traversals 
+  
+Graph Representations
+  * Adjacency List 
+  * Adjacency Matrix
+Graph Algorithms 
+  * Traversals
+  * Connected components, bridges, articulations points
+  * Dijkstra - finding shortest paths from given vertex
+  * Dijkstra on sparse graphs
+  * Bellman-Ford - finding shortest paths with negative weights
+  * 0-1 BFS and Dial's Algorithm
+  * Floyd-Warshall - finding all shortest paths
+  * Prim's Algorithm
+  * Kruskal's Algorithm and Types
+  * Kirchhoff Theorem
+  * Prüfer code
+  * Ford-Fulkerson and Edmonds-Karp
+  * Push - Relabel Algorithm 
+  * Dinic's Algorithm 
+  * MPM Algorithm 
+  * Kuhn's Algorithm 
+  
 Trie Algorithms 
   * Aho Corasick Algorithm 
   * Insertion 
