@@ -1,0 +1,33 @@
+The program must accept two string values A and B as the input. 
+The program must print all the longest common subsequences of the two string values sorted in ascending order as the output.Common subsequence is a group of characters present in both the string values in same order.
+
+Boundary Condition(s):
+1 <= A, B <= 1000
+
+Input Format:
+The first line contains A.
+The second line contains B.
+
+Output Format:
+The lines contain all the longest common subsequences of A and B.
+
+Example Input/Output 1:
+Input:
+trigger
+trireme
+
+Output:
+trie
+trir
+
+Explanation:
+There are two longest common subsequences.
+They are trie and trir which are printed as the output.
+
+Example Input/Output 2:
+Input:
+natural
+nurture
+
+Output:
+ntur
