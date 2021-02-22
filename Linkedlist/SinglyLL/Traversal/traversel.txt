@@ -1,0 +1,6 @@
+    def printdata(self):
+        last=self.head
+        while last:
+            print(last.data,end=' ')
+            last=last.next
+        print()
