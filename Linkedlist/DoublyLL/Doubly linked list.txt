@@ -1,0 +1,120 @@
+class Node:
+    def _init_(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+class DLinkedList:
+    def _init_(self,data):
+        self.head=Node(data)
+    def addbegining(self,data):
+        newnode=Node(data)
+        if self.head==None:
+            self.head=newnode
+            return
+        newnode.right=self.head
+        self.head.left=newnode
+        self.head=newnode
+    def addmiddle(self,midnode,data):
+        newnode=Node(data)
+        newnode.left=midnode
+        newnode.right=midnode.right
+        if midnode.right:
+            midnode.right.left=newnode
+        midnode.right=newnode
+    def addend(self,data):
+        newnode=Node(data)
+        if self.head==None:
+            self.head=newnode
+            return
+        last=self.head
+        while last.right:
+            last=last.right
+        newnode.left=last
+        last.right=newnode
+    def addposition(self,data,position):
+        if position==1:
+            self.addbegining(data)
+            return
+        if self.head==None:
+            self.head=Node(data)
+            return
+        last=self.head
+        while last.right:
+            if position==2:
+                self.addmiddle(last,data)
+                return
+            last=last.right
+            position-=1
+        self.addend(data)
+    def deletebegining(self):
+        if self.head==None:
+            return
+        newnode=self.head
+        self.head=self.head.right
+        if self.head:
+            self.head.left=None
+    def deletemiddle(self,midnode):
+        if midnode==None:
+            return
+        if midnode.left:
+            midnode.left.right=midnode.right
+        if midnode.right:
+            midnode.right.left=midnode.left
+        if self.head==midnode:
+            self.head=self.head.right
+    def deleteend(self):
+        if self.head==None or self.head.right==None:
+            self.head=None
+            return
+        last=self.head
+        while last.right:
+            last=last.right
+        last.left.right=None
+    def deleteposition(self,position):
+        if self.head==None:
+            return
+        last=self.head
+        while last and position>1:
+            position-=1
+            last=last.right
+        self.deletemiddle(last)
+    def printforward(self):
+        last=self.head
+        while last:
+            print(last.data,end=' ')
+            last=last.right
+        print()
+    def printbackward(self):
+        last=self.head
+        while last.right:
+            last=last.right
+        while last:
+            print(last.data,end=' ')
+            last=last.left
+        print()
+l=DLinkedList(4)
+l.addend(5)
+l.addend(6)
+l.addend(7)
+l.addend(8)
+l.addbegining(1)
+l.addposition(3,2)
+l.addposition(2,2)
+l.addposition(1,1)
+l.addposition(8,10)
+l.printforward()
+l.printbackward()
+l.deletebegining()
+l.deleteend()
+l.printforward()
+l.printbackward()
+l.addposition(2,2)
+l.addposition(6,7)
+l.printforward()
+l.printbackward()
+l.deletemiddle(l.head.right)
+l.printforward()
+l.printbackward()
+l.deleteposition(6)
+l.printforward()
+l.printbackward()
