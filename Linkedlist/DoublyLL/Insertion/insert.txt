@@ -1,0 +1,40 @@
+   def addbegining(self,data):
+        newnode=Node(data)
+        if self.head==None:
+            self.head=newnode
+            return
+        newnode.right=self.head
+        self.head.left=newnode
+        self.head=newnode
+    def addmiddle(self,midnode,data):
+        newnode=Node(data)
+        newnode.left=midnode
+        newnode.right=midnode.right
+        if midnode.right:
+            midnode.right.left=newnode
+        midnode.right=newnode
+    def addend(self,data):
+        newnode=Node(data)
+        if self.head==None:
+            self.head=newnode
+            return
+        last=self.head
+        while last.right:
+            last=last.right
+        newnode.left=last
+        last.right=newnode
+    def addposition(self,data,position):
+        if position==1:
+            self.addbegining(data)
+            return
+        if self.head==None:
+            self.head=Node(data)
+            return
+        last=self.head
+        while last.right:
+            if position==2:
+                self.addmiddle(last,data)
+                return
+            last=last.right
+            position-=1
+        self.addend(data)
