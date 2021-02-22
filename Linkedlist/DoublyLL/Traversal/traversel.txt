@@ -1,0 +1,14 @@
+    def printforward(self):
+        last=self.head
+        while last:
+            print(last.data,end=' ')
+            last=last.right
+        print()
+    def printbackward(self):
+        last=self.head
+        while last.right:
+            last=last.right
+        while last:
+            print(last.data,end=' ')
+            last=last.left
+        print()
