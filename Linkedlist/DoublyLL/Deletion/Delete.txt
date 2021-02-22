@@ -1,0 +1,32 @@
+    def deletebegining(self):
+        if self.head==None:
+            return
+        newnode=self.head
+        self.head=self.head.right
+        if self.head:
+            self.head.left=None
+    def deletemiddle(self,midnode):
+        if midnode==None:
+            return
+        if midnode.left:
+            midnode.left.right=midnode.right
+        if midnode.right:
+            midnode.right.left=midnode.left
+        if self.head==midnode:
+            self.head=self.head.right
+    def deleteend(self):
+        if self.head==None or self.head.right==None:
+            self.head=None
+            return
+        last=self.head
+        while last.right:
+            last=last.right
+        last.left.right=None
+    def deleteposition(self,position):
+        if self.head==None:
+            return
+        last=self.head
+        while last and position>1:
+            position-=1
+            last=last.right
+        self.deletemiddle(last)
