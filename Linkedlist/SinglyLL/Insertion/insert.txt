@@ -1,0 +1,31 @@
+    def addbegining(self,data):
+        newnode=Node(data)
+        newnode.next=self.head
+        self.head=newnode
+    def addmiddle(self,midnode,data):
+        newnode=Node(data)
+        newnode.next=midnode.next
+        midnode.next=newnode
+    def addend(self,data):
+        if self.head==None:
+            self.head=Node(data)
+            return
+        last=self.head
+        while last.next:
+            last=last.next
+        last.next=Node(data)
+    def addposition(self,data,position):
+        if position==1:
+            self.addbegining(data)
+            return
+        if self.head==None:
+            self.head=Node(data)
+            return
+        last=self.head
+        while last.next:
+            if position==2:
+                self.addmiddle(last,data)
+                return
+            last=last.next
+            position-=1
+        self.addend(data)
